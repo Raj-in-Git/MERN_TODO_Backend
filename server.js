@@ -5,9 +5,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-        origin:["https://todo-app-hodt.onrender.com/"]
-}));
+app.use(cors());
 
 mongoose.connect("mongodb+srv://rajeshvrj27:VEloh4XpTiR7WmYB@todo-db.4rqeh6b.mongodb.net/?retryWrites=true&w=majority")//mongodb+srv://rajeshvrj27:<password>@todo-db.4rqeh6b.mongodb.net/?retryWrites=true&w=majority
     .then(()=>console.log("DB is connected"))
