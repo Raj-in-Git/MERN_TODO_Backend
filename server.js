@@ -5,7 +5,9 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+        origin:["https://todo-app-hodt.onrender.com/"]
+}));
 
 mongoose.connect("mongodb://127.0.0.1:27017/mern-todo")
     .then(()=>console.log("DB is connected"))
