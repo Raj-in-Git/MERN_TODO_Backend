@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://rajeshvrj27:VEloh4XpTiR7WmYB@todo-db.4rqeh6b.mongodb.net/?retryWrites=true&w=majority")//mongodb+srv://rajeshvrj27:<password>@todo-db.4rqeh6b.mongodb.net/?retryWrites=true&w=majority
+mongoose.connect("process.env.mongodb_url")
     .then(()=>console.log("DB is connected"))
     .catch(console.error);
 
