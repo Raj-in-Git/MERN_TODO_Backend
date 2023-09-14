@@ -9,7 +9,7 @@ app.use(cors({
         origin:["https://todo-app-hodt.onrender.com/"]
 }));
 
-mongoose.connect("mongodb://127.0.0.1:27017/mern-todo")
+mongoose.connect("mongodb+srv://rajeshvrj27:VEloh4XpTiR7WmYB@todo-db.4rqeh6b.mongodb.net/?retryWrites=true&w=majority")//mongodb+srv://rajeshvrj27:<password>@todo-db.4rqeh6b.mongodb.net/?retryWrites=true&w=majority
     .then(()=>console.log("DB is connected"))
     .catch(console.error);
 
